@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive CV Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Chosen Palette: Serene Professional */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        .section-heading {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* Dark gray text */
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb; /* Light gray border */
+        }
+        .nav-link {
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #2563eb; /* Blue */
+        }
+        /* Chart container styling - Not directly used for this CV, but included as per general instructions */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Example max-width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; /* Base height, adjust with media queries or use Tailwind for responsive heights */
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky top-0 bg-white shadow-md p-4 z-10">
+        <div class="max-w-4xl mx-auto flex justify-around items-center text-lg font-medium text-gray-700">
+            <a href="#summary" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100">Professional Summary</a>
+            <a href="#education" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100">Education</a>
+            <a href="#experience" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100">Working Experience</a>
+            <a href="#skills" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100">Skills</a>
+            <a href="#target-schools" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100">Target Schools</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-6 md:p-8 lg:p-10 bg-white rounded-xl shadow-lg my-8">
+
+        <section id="summary" class="mb-10">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4 text-center">Jimmy Chen</h1>
+            <p class="text-xl text-gray-600 text-center mb-6">
+                24y | Jimmycic@outlook.com | 0952271888
+            </p>
+            <h2 class="section-heading">Professional Summary</h2>
+            <p class="text-gray-700 leading-relaxed text-lg">
+                Having basic understanding with 2 years of experience in software development and process auditing. Seeking to leverage a strong foundation in project management and cross-department communication, with an ambition for marketing, business development, consumer behavior into a Master or MBA program.
+            </p>
+        </section>
+
+        <section id="education" class="mb-10">
+            <h2 class="section-heading">Education</h2>
+            <p class="text-gray-700 leading-relaxed text-lg mb-6">
+                This section details your academic background, including your degree, university, time frame, and relevant coursework and key achievements. It aims to showcase your academic foundation and the knowledge gained during your studies.
+            </p>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm mb-6">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Bachelor, Management Science</h3>
+                <p class="text-gray-700 text-lg">National Yang-Ming Chiao-Tung University, Taiwan</p>
+                <p class="text-sm text-gray-500 mb-3">2019/9~2023/6</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                    <li>Relevant Courses: Economics, Marketing, Algorithm, Integer Programming</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="mb-10">
+            <h2 class="section-heading">Working Experience</h2>
+            <p class="text-gray-700 leading-relaxed text-lg mb-6">
+                This section outlines your professional experience, including job titles, companies, tenure, and key responsibilities and achievements. It aims to highlight your contributions and skills gained in real-world work environments.
+            </p>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm mb-6">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Project Management Specialist</h3>
+                <p class="text-gray-700 text-lg">Adecco/Ambarella, Taiwan, Hsinchu</p>
+                <p class="text-sm text-gray-500 mb-3">2023/8~2024/2</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                    <li>Assure: Compliance of project and standard</li>
+                    <li>Establish: Systematic method of software development process with owner</li>
+                    <li>Improve: More efficient way for process workflow</li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Project Management Specialist / QA Engineer</h3>
+                <p class="text-gray-700 text-lg">Ambarella, Taiwan, Hsinchu</p>
+                <p class="text-sm text-gray-500 mb-3">2024/3~</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4 space-y-1">
+                    <li>Same as above</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-10">
+            <h2 class="section-heading">Skills</h2>
+            <p class="text-gray-700 leading-relaxed text-lg mb-6">
+                This section lists your technical and soft skills, as well as your language proficiencies. It aims to provide a comprehensive overview of your expertise and personal attributes across different domains.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Technical Skills:</h3>
+                    <ul class="list-disc list-inside ml-4 space-y-1">
+                        <li>Programming Languages: Python</li>
+                        <li>Tools & Technologies: Git, Cursor, Polarion, Microsoft Stages</li>
+                        <li>Software: Microsoft Office Suite</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Soft Skills:</h3>
+                    <ul class="list-disc list-inside ml-4 space-y-1">
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Problem-Solving</li>
+                        <li>Leadership</li>
+                        <li>Adaptability</li>
+                        <li>Critical Thinking</li>
+                        <li>Curiosity</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-3">Languages:</h3>
+                    <ul class="list-disc list-inside ml-4 space-y-1">
+                        <li>Traditional-Chinese (Native)</li>
+                        <li>English (Fluent)</li>
+                        <li>Japanese (Entry)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="target-schools" class="mb-10">
+            <h2 class="section-heading">Target Schools</h2>
+            <p class="text-gray-700 leading-relaxed text-lg mb-6">
+                This section lists your target schools, including the school name, country, program type, and planned start date. It aims to clearly present your academic plans.
+            </p>
+            <div class="overflow-x-auto rounded-lg shadow-sm border border-gray-200">
+                <table class="min-w-full divide-y divide-gray-200 cv-table">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Country</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Program Type</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Plan to Start</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">GSM-KU</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Japan</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Master/MBA</td>
+                            <td class="px-6 py-4 whitespace-nowrap">2026/9</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">WBS</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Japan</td>
+                            <td class="px-6 py-4 whitespace-nowrap">MBA</td>
+                            <td class="px-6 py-4 whitespace-nowrap">2026/9</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">RSM</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Netherlands</td>
+                            <td class="px-6 py-4 whitespace-nowrap">Master</td>
+                            <td class="px-6 py-4 whitespace-nowrap">2026/9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // JavaScript for smooth scrolling (if using in-page navigation)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
